@@ -22,20 +22,24 @@ bounce: `bounce 1s infinite`
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+<section class="h-[50vh] relative">
 
+<div class="absolute inset-0 bg-cover bg-center" style="background-image:url(images/shock.jpg);">
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
    <nav
-          class="flex justify-between items-center p-4 bg-black/50 backdrop-blur-md"
+          class=" sticky top-0 left-0 w-full flex justify-between items-center p-4 bg-black/30 backdrop-blur-md z-50"
         >
-          <div>
+          <div class="flex items-center gap-2">
             <img
               src="/images/skilllinklogo.jpg"
               alt="logo"
-              class="w-10 h-10  object-cover rounded-full"
+              class="w-10 h-10  object contain rounded-full"
             />
 
             <p class="text-yellow-500 text-[12px] font-bold pt-2">Skill Link</p>
           </div>
-          <ul class="flex text-yellow-500 justify-between">
+          <ul class="flex gap-6 text-yellow-500 font-bold">
             <li>
                 <button>
                     <svg class="w-5 h-5" fill="none" stroke="curremtColor" viewbox="0 0 24 24">
@@ -88,35 +92,29 @@ bounce: `bounce 1s infinite`
             </li>
           </ul>
         </nav>
-      </div>
-
-<section class="h-[50vh] relative">
-
-<div class="absolute inset-0 bg-cover bg-center" style="background-image:url(images/shock.jpg);">
-<div class="absolute inset-0 bg-black/40"></div>
-</div>
+     
 
 <div class="relative h-full flex flex-col justify-center items-center text-center px-6">
 <h1 class="text-4xl md:text-5l font-bold text-white mb-4"> Feeling stuck searching for opportunities?</h1>
-<p class="text-yellow-500 mb-6 max-w-lg">Too many websites. Too much confusion. No clear direction</p>
-<button class="bg-sky-500 text-white px-6 py-3 rounded-lg hover:scale-105 transition-transform">Apply</button>
+<p class="text-yellow-500 mb-6 max-w-lg font-bold text-2xl">Too many websites. Too much confusion. No clear direction</p>
+ <button class=" bg-gray-800 text-[#FFD700] text-xl font-bold px-10 py-4 rounded-full shadow-lg hover:scale-110 transition transform">APPLY NOW</button>
 </div>
 </div>
-
+</section>
 
 
 <!-- Alternating left right section -->
-<section class="bg-gradient-to-b from-sky-400 to-sky-200 py-20 px-6">
+<section class="bg-white py-20 px-6">
     <div class="flex flex-col md:flex-row items-center gap-10 mb-20">
 <div class="md:w-1/2 text-white">
     <h3 class="text-4xl font-bold mb-4">
 Unlock Your Potential!
     </h3>
-    <p class="text-3xl font-bold text-blue-800">
+    <p class="text-3xl font-bold text-black">
         No more jumping between platforms. Everything is centalised for easy access.Skill Link connects you with opportunities that help you grow your skills , knowledge and abilities- everything you need to succeed.
  Looking for scholarship-related online courses and opportunities? Youre at the right place!
     </p>
-    <button class="bg-sky-500 text-white px-6 py-3 rounded-lg hover:scale-105 transition-transform">Apply</button>
+    <button class=" bg-gray-800 text-[#FFD700] text-xl font-bold px-10 py-4 rounded-full shadow-lg hover:scale-110 transition transform ml-40">APPLY NOW</button>
 
 </div>
  
@@ -125,55 +123,44 @@ Unlock Your Potential!
 </div>
 </div>
 
+
+<div class="bg-sky-200 shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105">
+<img src="/images/happy.jpg" alt="food1" class="w-full h-48 object-cover">
+ <div class="p-4">
+ <h3 class=" text-slate-950 text-lg font-bold mt-2">JOIN THOUSANDS BENEFITING</h3>
+ <p class="text-3xl font-bold text-black">
+    Thousands of students have already found scholarships , internships and jobs through Skill Link. Join our growing community and take the next step in yout career.
+    </p>
+
+</div>
+</div>
+
+ 
+<br>
+
+
+
+
+
+
+<br>
 <div class="flex flex-col md:flex-row-reverse items center gap-10 mb-20">
 <div class="md:w-1/2 text-white">
-    <h1 class="text-2xl font-bold mb-4">
-Join Thousands Benefiting!
-    </h1>
-    <p>
-    Thousands of students have already found scholarships , internships and jobs through Skill Link. Join our growing community and take the next staep in yout career.
-
-
-    </p>
-
-
-</div>
-
-
-<div class="md:w-1/2">
-    <img src="/images/blue-diamond.webp" alt="photo" class="rounded-lg shadow-lg">
-</div>
-</div>
-
-<div class="flex flex-col md:flex-row items-center gap-10 mb-20">
-<div class="md:w-1/2 text-white">
     <h1 class="text-3xl font-bold mb-4">
-ELIGIBILITY
+Find your Path
     </h1>
-    <div class=" text-2xl text-black font-bold">
-    <p class="p-4">
-        Completed secondary education(Highschool, A-levels or equivalent)
-        </p>
-        <br>
-        <p class="p-4">
-        Valid Identification or National ID
-        </p>
-        <br>
-        <p class="p-4">
-        Passport(For international scholarships/Internships)
-        </p>
-        <br>
-        <p class="p-4">
-        No crime record whatsoever
+    <p class="text-3xl font-bold text-black">
+    We support and empower Africa’s future leaders, increase access to higher education .We share scholarships, advice and success stories, empower young leaders, and increase access to higher education for African youth. Skill Link founded in 2020 is a scholarship platform and community for African students and scholars. We share scholarships, advice and success stories, empower young leaders, and increase access to higher education for African youth
     </p>
-<br>
-</div>
+ <button class=" bg-gray-800 text-[#FFD700] text-xl font-bold px-10 py-4 rounded-full shadow-lg hover:scale-110 transition transform m-10">APPLY NOW</button>
 
 </div>
 
 <div class="md:w-1/2">
-    <img src="/images/blue-diamond.webp" alt="photo" class="rounded-lg shadow-lg">
+   
+    <img src="/images/pexels-olia-danilevich-8093022.jpg" alt="finally" width="550" height="250">
 </div>
+
 </div>
 
 
@@ -181,6 +168,26 @@ ELIGIBILITY
 
 </section>
 
+
+
+
+
+<div class="bg-yellow-200 p-10 rounded-xl mx-8 my-12 flex flex-col md:flex-row gap-8 justify-center items-strech">
+
+<div class="bg-sky-200 hover:bg-sky-300 duration-300 transition rounded-xl shadow-lg flex-1 p-6 flex flex-col items-center text-center">
+<img src="" alt="" class="h-32 w-32 object-contain mb-4">
+<h2 class="text-white font-bold text-xl mb-2" >Local Scholarships🎓</h2>
+<p class="text-white text-base">Access verified scholarships across Kenya for students and graduates</p>
+</div>
+
+<div class="bg-sky-200 hover:bg-sky-300 duration-300 transition rounded-xl shadow-lg flex-1 p-6 flex flex-col items-center text-center">
+<img src="" alt="" class="h-32 w-32 object-contain mb-4">
+<h2 class="text-white font-bold text-xl mb-2" >International Scholarships🌍</h2>
+<p class="text-white text-base">Discover Global opportunities to expand your education beyond borders</p>
+</div>
+
+
+</div>
 
 </section>
 
