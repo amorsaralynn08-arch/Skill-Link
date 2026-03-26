@@ -50,3 +50,6 @@ International options.
 1. HTML
 
 2. TAILWIND
+
+   ### License
+   This project is under MIT License
