@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <section>
@@ -76,12 +77,21 @@
     WELCOME TO YOUR GLOBAL OPPORTUNUTIES🌍
 </h2>
 <section id="swipe_cards">
+<div carousel_countainer>
+
+<div id="context">
+<h2>Global Exams that shape your future</h2>
+<p>These standardized tests are key requirements for scholarships,
+   <br>
+    international universities, and professional programs worldwide.
+    <br>
+    Click a card below to explore each one.</p>
+</div>
+
 <div class="FAQS_Inner_Container">
 
-<button id="scrollleft" class="arrowleft"> <i class="fa-solid fa-arrow-left"></i></button>
-<button id="scrollright" class="arrowright"><i class="fa-solid fa-arrow-right"></i></button>
 
-    <div class= "FAQS" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
+    <div class= "FAQS" onclick="opencontent('SAT')" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
 
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">SAT</h3>
@@ -92,7 +102,7 @@
 </div>
 </div>
 
-    <div class="FAQS" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
+    <div class="FAQS" onclick="openclick('ACT')" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
 
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">ACT</h3>
@@ -105,7 +115,7 @@
 
 
 
-    <div class=" FAQS" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
+    <div class=" FAQS" onclick="opencontent('IELTS')" shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
 
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">IELTS</h3>
@@ -118,7 +128,7 @@
 
 
 
-    <div class=" FAQS" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
+    <div class=" FAQS" onclick="opencontent('GRE')" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
 
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">GRE</h3>
@@ -131,7 +141,7 @@
 
 
 
-    <div class="FAQS" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
+    <div class="FAQS" onclick="opencontent('GMAT')" shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
 
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">GMAT</h3>
@@ -143,7 +153,7 @@
 </div>
 
 
-    <div class="FAQS" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
+    <div class="FAQS" onclick="opencontent('LSAT')" shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
 
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">LSAT</h3>
@@ -155,7 +165,7 @@
 </div>
 
 
-    <div class="FAQS" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
+    <div class="FAQS" onclick="opencontent('MCAT')" shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
 
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">MCAT</h3>
@@ -169,9 +179,9 @@
 </section>
 
 
-
+<div class="overlay" id="overlay"></div>
 <div class="full_content">
-<div class="expanded_content">
+<div id="expand_box" class="expanded_content">
   <!-- icon -->
   <a href="#swipe_cards"> <i class="fa-solid fa-x"></i></a>
    <h2>Whats really SAT about?!</h2>
@@ -187,7 +197,9 @@ Scoring: 400 – 1600
 Duration: ~2 hours
 Validity: 5 years
 The SAT in Kenya is a digital, standardized college admission test offered seven times a year (March, May, June, August, October, November, December). Managed by the College Board and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
+  
 
+<button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
 </div>
 
 </div>
