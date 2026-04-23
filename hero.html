@@ -319,7 +319,7 @@ bounce: `bounce 1s infinite`
 
     <!-- View more -->
     <div class="text-center mt-10">
-      <button class="text-sky-500 font-semibold hover:underline">
+      <button id="viewscholarships" class="text-sky-500 font-semibold hover:underline">
         View all scholarships →
       </button>
     </div>
@@ -331,15 +331,15 @@ bounce: `bounce 1s infinite`
 
 <div id="overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center z-50">
 
-  <div id="modal"
-    class="bg-white w-[95%] max-w-3xl rounded-2xl shadow-xl flex overflow-hidden
+  <div id="popup"
+    class= " bg-white w-[95%] max-w-3xl rounded-2xl shadow-xl flex overflow-hidden
            transform scale-95 opacity-0 transition-all duration-300">
-
+  
     <!-- LEFT SIDE: CHARACTER -->
     <div class="w-1/2 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center relative">
 
       <div class="animate-bounce-slow">
-        <img src="your-character.png" class="w-48 h-48 object-contain" />
+        <img src="/images/—Pngtree—charming white robot character with_23489584.png" class="w-48 h-48 object-contain" />
       </div>
 
     </div>
@@ -350,26 +350,26 @@ bounce: `bounce 1s infinite`
       <!-- Chat bubble -->
       <div class="bg-gray-100 rounded-2xl p-4 mb-6 relative">
 
-        <p class="text-lg font-semibold">
-          Hey <span id="userName">Amor</span> 👋
-        </p>
+       <p class="text-lg font-semibold">
+  Hey <span id="userName">there</span> 👋
+</p>
 
-        <p class="text-gray-600 mt-2">
-          Where do you want to study?
-        </p>
+<p class="text-gray-600 mt-2">
+  Where do you want to study?
+</p>
 
         <!-- little bubble tail -->
         <div class="absolute left-[-8px] top-6 w-4 h-4 bg-gray-100 rotate-45"></div>
       </div>
 
       <!-- Buttons -->
-      <a href="local.html"
-         class="mb-3 text-center bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition">
+      <a href="international.html"
+         class="mb-3 text-center bg-yellow-400 text-white py-2 rounded-xl hover:bg-yellow-500 transition">
         Explore Local Opportunities
       </a>
 
-      <a href="international.html"
-         class="text-center bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition">
+      <a href="local.html"
+         class="text-center bg-sky-500 text-white py-2 rounded-xl hover:bg-sky-600 transition">
         Explore Global Opportunities
       </a>
 
