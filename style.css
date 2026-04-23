@@ -106,3 +106,14 @@ transition:transform 0.3s ease , box-shadow 0.25s ease;
     z-index: 90;
 }
 
+.course-btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #c5d0e4;
+  transition: all 0.3s ease;
+}
+
+.course-btn:hover {
+  background: #dbeafe;
+  transform: translateY(-2px);
+}

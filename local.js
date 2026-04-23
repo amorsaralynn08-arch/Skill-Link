@@ -48,8 +48,53 @@ $(document).ready(function(){
     });
 });
 
-// =====================
-// 1. USER CLASS (stores login info)
-// =====================
 
 
+const courses = {
+  Engineering: ["Math", "Physics", "English"],
+  Medicine: ["Biology", "Chemistry", "English"],
+  Business: ["Math", "Economics", "English"],
+  IT: ["Programming", "Math", "English"],
+  Education: ["Math", "Pedagogy", "English"],
+  Arts: ["Art", "History", "English"],
+  Science: ["Biology", "Chemistry", "English"],
+  Law: ["Legal Studies", "English"],
+  Architecture: ["Design", "Math", "English"],
+  Design: ["Design", "Math", "English"],
+  Humanities: ["History", "Literature", "English"]
+};
+
+document.querySelectorAll(".course-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    const course = btn.innerText;
+    const subjects = courses[course];
+
+    courseBox.classList.remove("hidden");
+
+    const inputs = subjects.map(sub => `
+      <div class="flex flex-col">
+        <label class="text-xs text-gray-500 mb-1">${sub}</label>
+        <input 
+          class="grade-input w-16 px-2 py-1 text-center border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-300"
+          maxlength="2"
+          placeholder="A+"
+        />
+      </div>
+    `).join("");
+
+    courseBox.innerHTML = `
+      <h3 class="text-lg font-semibold mb-3">${course} Requirements</h3>
+
+      <div class="flex flex-wrap gap-3 items-end">
+        ${inputs}
+      </div>
+
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full transition">
+        Calculate GPA
+      </button>
+
+      <div id="results" class="mt-3"></div>
+    `;
+  });
+});
