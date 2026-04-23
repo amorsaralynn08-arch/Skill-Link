@@ -1,3 +1,27 @@
+
+const SAT_content= document.getElementById('SAT').innerHTML;
+const ACT_content= document.getElementById('ACT').innerHTML;
+const IELTS_content= document.getElementById('IELTS').innerHTML;
+const TOEFL_content= document.getElementById('TOEFL').innerHTML;
+const GRE_content= document.getElementById('GRE').innerHTML;
+const GMAT_content= document.getElementById('GMAT').innerHTML;
+const LSAT_content= document.getElementById('LSAT').innerHTML;
+const MCAT_content= document.getElementById('MCAT').innerHTML;
+
+const expandeddata = {
+SAT: SAT_content,
+ACT: ACT_content,
+IELTS: IELTS_content,
+TOEFL: TOEFL_content,
+GRE: GRE_content,
+GMAT: GMAT_content,
+LSAT: LSAT_content,
+MCAT: MCAT_content,
+
+}
+
+
+
 // opencontent function
 function opencontent(test)
 {
@@ -8,11 +32,8 @@ box.style.display='block';
 overlay.style.display='block';
 
 // what should pop up when the user clicks on thecard
-if (test==='SAT')
-box.innerHTML=
-'<a href="#FAQS_Inner_Container"> <i class="fa-solid fa-x" onclick="closecontent()"></i></a> <h2>Whats really SAT about?!</h2> <p>Full Name: Scholastic Assessment TestPurpose: Measures readiness for college-level workWho needs it: Students applying to undergraduate programs (especially in the US)Sections:ReadingWriting & LanguageMathScoring: 400 – 1600Duration: ~2 hoursValidity: 5 yearsThe SAT in Kenya is a digital, standardized college admission test offered seven times a year (March, May, June, August, October, November, December). Managed by the College Board and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>';
+box.innerHTML = expandeddata[test];
 }
-
 // closecontent function
 function closecontent(){
     document.getElementById('expand_box').style.display='none';
@@ -27,4 +48,97 @@ $(document).ready(function(){
     });
 });
 
+// =====================
+// 1. USER CLASS (stores login info)
+// =====================
 
+
+console.log("Script loaded successfully");
+class Userloggindata {
+    constructor(username, email, password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
+    savetostorage() {
+        const userData = {
+            username: this.username,
+            email: this.email,
+            password: this.password
+        };
+
+        localStorage.setItem("userlogindata", JSON.stringify(userData));
+    }
+}
+
+
+// =====================
+// 2. HERO PAGE WELCOME DISPLAY
+// =====================
+class Welcomescreen {
+    constructor(elementId) {
+        this.displayElement = document.getElementById(elementId);
+    }
+
+    displayonscreen() {
+        const data = localStorage.getItem("userlogindata");
+        const message = this.displayElement;
+
+        if (!data || !message) return;
+
+        const userData = JSON.parse(data);
+
+        message.classList.remove("hidden");
+
+        message.innerHTML = `
+            <div class="max-w-7xl mx-auto px-10 py-6">
+                <h2 class="text-3xl font-semibold text-slate-800">
+                    Welcome back, 
+                    <span class="text-sky-500 font-bold">${userData.username}</span>
+                </h2>
+                <p class="text-slate-500 text-sm">
+                    We're glad to see you again!
+                </p>
+            </div>
+        `;
+    }
+}
+
+
+// =====================
+// 3. LOGIN PAGE LOGIC
+// =====================
+const loginbutton = document.getElementById("loginbtn");
+
+if (loginbutton) {
+    loginbutton.addEventListener("click", function () {
+        const usernameVal = document.getElementById("username").value;
+        const emailVal = document.getElementById("email").value;
+        const passwordVal = document.getElementById("password").value;
+
+        if (!usernameVal || !emailVal) {
+            alert("Please fill in your details");
+            return;
+        }
+
+        const newUser = new Userloggindata(
+            usernameVal,
+            emailVal,
+            passwordVal
+        );
+
+        newUser.savetostorage();
+
+        window.location.href = "hero.html";
+    });
+}
+
+
+// =====================
+// 4. HERO PAGE INIT
+// =====================
+document.addEventListener("DOMContentLoaded", () => {
+    const welcome = new Welcomescreen("welcome-display");
+    welcome.displayonscreen();
+});

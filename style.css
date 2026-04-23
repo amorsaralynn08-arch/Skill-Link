@@ -18,12 +18,16 @@ padding: 20px;
   display: none;
 }
 
+.expanded_content::-webkit-scrollbar {
+  display: none;
+}
+
 .FAQS{
 min-width: 300px;
 max-width: 300px;
 height: 300px;
 flex: 0 0 280px;
-background: #f0f0f0;
+background: #e3ecec;
 border: 1px solid #ddd;
 border-radius: 16px;
 padding: 16px;
@@ -70,13 +74,23 @@ transition:transform 0.3s ease , box-shadow 0.25s ease;
     width: 90%;
     max-width: 500px;
     max-height: 80vh;
-    background: white;
+    background: rgb(245, 239, 185);
     padding: 20px;
     border-radius: 20px;
     overflow: auto;
 
 }
+.expanded_content h3{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
 
+.expanded_content p{
+    font-size: 16px;
+    color: #333;
+    line-height:1.6;
+}
 
 .overlay {
     position: fixed;

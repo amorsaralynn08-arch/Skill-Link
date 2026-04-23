@@ -77,17 +77,30 @@
     WELCOME TO YOUR GLOBAL OPPORTUNUTIES🌍
 </h2>
 <section id="swipe_cards">
-<div carousel_countainer>
+<div class="carousel_container">
 
-<div id="context">
-<h2>Global Exams that shape your future</h2>
-<p>These standardized tests are key requirements for scholarships,
-   <br>
-    international universities, and professional programs worldwide.
-    <br>
-    Click a card below to explore each one.</p>
+<div 
+  id="context" 
+  class="relative w-full max-w-3xl mx-auto h-[400px] bg-center bg-no-repeat "
+  style="background-image: url('/images/blob 1.png'); background-size:70%;"
+>
+
+  <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 z-10">
+
+    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">
+      Global Exams that shape your future
+    </h2>
+
+    <p class="mt-2 text-sm md:text-base text-slate-700">
+      These standardized tests are key requirements for scholarships,
+      international universities, and professional programs worldwide.
+      <br>
+      Click a card below to explore each one.
+    </p>
+
+  </div>
+
 </div>
-
 <div class="FAQS_Inner_Container">
 
 
@@ -96,18 +109,18 @@
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">SAT</h3>
  <p class="text-slate-950 mt-2">
-    SAT is a standardized test widely used for college admissions in the United States, assessing students' readiness for college-level work and providing a common data point for comparing applicants. It evaluates skills in reading, writing, and math, and is scored on a scale of 400 to 1600. The SAT is typically taken by high school students and is an important factor in the college application process.
+    SAT (Scholastic Assesment Test)is a standardized test widely used for college admissions in the United States, assessing students' readiness for college-level work and providing a common data point for comparing applicants. 
  </p>
  
 </div>
 </div>
 
-    <div class="FAQS" onclick="openclick('ACT')" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
+    <div class="FAQS" onclick="opencontent('ACT')" bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
 
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">ACT</h3>
  <p class="text-slate-950 mt-2">
-    ACT is a standardized test widely used for college admissions in the United States, assessing students' readiness for college-level work and providing a common data point for comparing applicants. It evaluates skills in reading, writing, and math, and is scored on a scale of 21 to 36. The ACT is typically taken by high school students and is an important factor in the college application process.
+    ACT (American College Test)is a standardized test widely used for college admissions in the United States, assessing students' readiness for college-level work and providing a common data point for comparing applicants.
  </p>
  
 </div>
@@ -120,9 +133,7 @@
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">IELTS</h3>
  <p class="text-slate-950 mt-2">
-    IELTS is a standardized test widely used for college admissions and immigration purposes, assessing students' English language proficiency in reading, writing, listening, and speaking. It is scored on a scale of 0 to 9. The IELTS is typically taken by non-native English speakers and is an important factor in the college application and immigration processes.
- </p>
- 
+    IELTS (International English Language Testing System)is a standardized test widely used for college admissions and immigration purposes, assessing students' English language proficiency in reading, writing, listening, and speaking.
 </div>
 </div>
 
@@ -133,20 +144,19 @@
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">GRE</h3>
  <p class="text-slate-950 mt-2">
-    GRE is a standardized test widely used for graduate school admissions in the United States, assessing students' readiness for advanced academic work providing a common data point. It evaluates skills in verbal reasoning, quantitative reasoning, and analytical writing, and is scored on a scale of 260 to 340. The GRE is typically taken by undergraduate students.
- </p>
+    GRE (Graduate Record Examination)is a standardized test widely used for graduate school admissions in the United States, assessing students' readiness for advanced academic work providing a common data point.
  
 </div>
 </div>
 
 
 
-    <div class="FAQS" onclick="opencontent('GMAT')" shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
+<div class="FAQS" onclick="opencontent('GMAT')" shadow-lg rounded-xl overflow-hidden transform transition hover:bg-yellow-100 hover:scale-105>
 
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">GMAT</h3>
  <p class="text-slate-950 mt-2">
-    GMAT is a standardized test widely used for business school admissions in the United States, assessing students' readiness for graduate-level business education and providing a common data point for comparing applicants. It evaluates skills in analytical writing, integrated reasoning, quantitative reasoning, and verbal reasoning, and is scored on a scale of 200 to 800. 
+    GMAT (Graduate Management Admission Test)is a standardized test widely used for business school admissions in the United States, assessing students' readiness for graduate-level business education and providing a common data point for comparing applicants.
  </p>
  
 </div>
@@ -158,7 +168,7 @@
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">LSAT</h3>
  <p class="text-slate-950 mt-2">
-    LSAT is a standardized test widely used for law school admissions in the United States, assessing students' readiness for legal education. It evaluates skills in reading comprehension, logical reasoning, and analytical thinking, and is scored on a scale of 120 to 180. The LSAT is typically taken by undergraduate students and is an important factor in the law school application process.
+    LSAT (Law School Admission Test)is a standardized test widely used for law school admissions in the United States, assessing students' readiness for legal education.
  </p>
  
 </div>
@@ -170,7 +180,7 @@
  <div class="p-4">
  <h3 class=" text-slate-950 text-lg font-bold mt-2">MCAT</h3>
  <p class="text-slate-950 mt-2">
-    MCAT is a standardized test widely used for medical school admissions in the United States, assessing students' readiness for medical education. It evaluates skills in biological and biochemical foundations of living systems, chemical processes and concepts, psychological, social, and biological foundations of behavior, and critical analysis and reasoning skills, and is scored on a scale of 472 to 528.
+    MCAT (Medical College Admission Test)is a standardized test widely used for medical school admissions in the United States, assessing students' readiness for medical education. 
  </p>
  
 </div>
@@ -183,36 +193,225 @@
 <div class="full_content">
 <div id="expand_box" class="expanded_content">
   <!-- icon -->
-  <a href="#swipe_cards"> <i class="fa-solid fa-x"></i></a>
+  <div id="SAT">
+   <button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
    <h2>Whats really SAT about?!</h2>
 
-   <p>Full Name: Scholastic Assessment Test
-Purpose: Measures readiness for college-level work
-Who needs it: Students applying to undergraduate programs (especially in the US)
-Sections:
-Reading
-Writing & Language
-Math
-Scoring: 400 – 1600
-Duration: ~2 hours
-Validity: 5 years
-The SAT in Kenya is a digital, standardized college admission test offered seven times a year (March, May, June, August, October, November, December). Managed by the College Board and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
+   <p>Full Name: Scholastic Assessment Test</p>
+   </p>Purpose: Measures readiness for college-level work</p>
+   <p>Who needs it: Students applying to undergraduate programs (especially in the US)</p>
+   <p>Sections:</p>
+   <ul>
+     <li>Reading</li>
+     <li>Writing & Language</li>
+     <li>Math</li>
+     </ul>
+     <ul>
+<li>Scoring: 400 – 1600</li>
+ <li>Duration: ~2 hours</li>
+ <li>Validity: 5 years</li>
+ </ul>
+ <p>The SAT in Kenya is a digital, standardized college admission test offered seven times a year (March, May, June, August, October, November, December). Managed by the College Board and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
   
 
-<button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
+
+
+</div>
+
+<div id="ACT">
+   <button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
+   <h2>Whats really ACT about?!</h2>
+
+   <p>Full Name: American College Testing</p>
+   </p>Purpose: Measures readiness for college-level work</p>
+   <p>Who needs it: Students applying to undergraduate programs (especially in the US)</p>
+   <p>Sections:</p>
+   <ul>
+     <li>Reading</li>
+     <li>Writing & Language</li>
+     <li>Math</li>
+     </ul>
+     <ul>
+<li>Scoring: 400 – 1600</li>
+ <li>Duration: ~2 hours</li>
+ <li>Validity: 5 years</li>
+ </ul>
+ <p>The SAT in Kenya is a digital, standardized college admission test offered seven times a year (March, May, June, August, October, November, December). Managed by the College Board and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
+  
+
+
+
+</div>
+
+
+<div id="IELTS">
+   <button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
+   <h2>Whats really IELTS about?!</h2>
+
+   <p>Full Name: International English Language Testing System</p>
+   </p>Purpose: Measures English language proficiency for academic and professional purposes</p>
+   <p>Who needs it: Students applying to undergraduate programs (especially in the US)</p>
+   <p>Sections:</p>
+   <ul>
+     <li>Reading</li>
+     <li>Writing & Language</li>
+     <li>Math</li>
+     </ul>
+     <ul>
+<li>Scoring: 400 – 1600</li>
+ <li>Duration: ~2 hours</li>
+ <li>Validity: 5 years</li>
+ </ul>
+ <p>The SAT in Kenya is a digital, standardized college admission test offered seven times a year (March, May, June, August, October, November, December). Managed by the College Board and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
+  
+
+
+</div>
+
+<div id="TOEFL">
+   <button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
+   <h2>Whats really TOEFL about?!</h2>
+
+   <p>Full Name: Test of English as a Foreign Language</p>
+   </p>Purpose: Measures English language proficiency for academic and professional purposes</p>
+   <p>Who needs it: Students applying to undergraduate programs (especially in the US)</p>
+   <p>Sections:</p>
+   <ul>
+     <li>Reading</li>
+     <li>Writing & Language</li>
+     <li>Math</li>
+     </ul>
+     <ul>
+<li>Scoring: 400 – 1600</li>
+ <li>Duration: ~2 hours</li>
+ <li>Validity: 5 years</li>
+ </ul>
+ <p>The TOEFL in Kenya is a digital, standardized English language proficiency test offered multiple times a year. Managed by ETS and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
+  
+
+
+
+</div>
+
+
+<div id="GRE">
+   <button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
+   <h2>Whats really GRE about?!</h2>
+
+   <p>Full Name: Graduate Record Examination</p>
+   </p>Purpose: Measures readiness for graduate-level work</p>
+   <p>Who needs it: Students applying to graduate programs (especially in the US)</p>
+   <p>Sections:</p>
+   <ul>
+     <li>Reading</li>
+     <li>Writing & Language</li>
+     <li>Math</li>
+     </ul>
+     <ul>
+<li>Scoring: 400 – 1600</li>
+ <li>Duration: ~2 hours</li>
+ <li>Validity: 5 years</li>
+ </ul>
+ <p>The GRE in Kenya is a digital, standardized college admission test offered seven times a year (March, May, June, August, October, November, December). Managed by the College Board and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
+  
+
+
+
+</div>
+
+
+
+<div id="GMAT">
+   <button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
+   <h2>Whats really GMAT about?!</h2>
+
+   <p>Full Name: Graduate Management Admission Test</p>
+   </p>Purpose: Measures readiness for graduate-level work</p>
+   <p>Who needs it: Students applying to graduate programs (especially in the US)</p>
+   <p>Sections:</p>
+   <ul>
+     <li>Reading</li>
+     <li>Writing & Language</li>
+     <li>Math</li>
+     </ul>
+     <ul>
+<li>Scoring: 400 – 1600</li>
+ <li>Duration: ~2 hours</li>
+ <li>Validity: 5 years</li>
+ </ul>
+ <p>The GMAT in Kenya is a digital, standardized graduate management admission test offered multiple times a year. Managed by the Graduate Management Admission Council and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
+  
+
+
+
+</div>
+
+
+
+<div id="LSAT">
+   <button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
+   <h2>Whats really LSAT about?!</h2>
+
+   <p>Full Name: Law School Admission Test</p>
+   </p>Purpose: Measures readiness for law school</p>
+   <p>Who needs it: Students applying to law programs (especially in the US)</p>
+   <p>Sections:</p>
+   <ul>
+     <li>Reading</li>
+     <li>Writing & Language</li>
+     <li>Math</li>
+     </ul>
+     <ul>
+<li>Scoring: 400 – 1600</li>
+ <li>Duration: ~2 hours</li>
+ <li>Validity: 5 years</li>
+ </ul>
+ <p>The LSAT in Kenya is a digital, standardized law school admission test offered multiple times a year. Managed by the Law School Admission Council and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
+  
+
+
+
+</div>
+
+
+<div id="MCAT">
+   <button onclick="closecontent()"><i class="fa-solid fa-x"></i></button>
+   <h2>Whats really MCAT about?!</h2>
+
+   <p>Full Name: Medical College Admission Test</p>
+   </p>Purpose: Measures readiness for medical school</p>
+   <p>Who needs it: Students applying to medical programs (especially in the US)</p>
+   <p>Sections:</p>
+   <ul>
+     <li>Reading</li>
+     <li>Writing & Language</li>
+     <li>Math</li>
+     </ul>
+     <ul>
+<li>Scoring: 400 – 1600</li>
+ <li>Duration: ~2 hours</li>
+ <li>Validity: 5 years</li>
+ </ul>
+ <p>The MCAT in Kenya is a digital, standardized medical school admission test offered multiple times a year. Managed by the Association of American Medical Colleges and facilitated by centers like Learning & Testing Services (LTS) E.A Ltd, the exam cost is roughly KES 19,000, payable via M-PESA. Registration is online, with tests held at authorized schools in Nairobi, Mombasa, and Eldoret.</p>
+  
+
+
+
+</div>
+
+
+
 </div>
 
 </div>
 
 
-
-
-
-
-
 </div>
 
-
+<br>
+<br>
+<br>
+<br>
 
 
 <div class="grid grid-cols-1 sm-grid-cols-2 md:grid-cols-3 gap-6 px-6 md:px-12 ">
