@@ -49,6 +49,7 @@ $(document).ready(function(){
 });
 
 
+const courseBox = document.getElementById("courseBox");
 
 const courses = {
   Engineering: ["Math", "Physics", "English"],
@@ -62,6 +63,21 @@ const courses = {
   Architecture: ["Design", "Math", "English"],
   Design: ["Design", "Math", "English"],
   Humanities: ["History", "Literature", "English"]
+};
+
+const gradePoints = {
+  "A": 12,
+  "A-": 11,
+  "B+": 10,
+  "B": 9,
+  "B-": 8,
+  "C+": 7,
+  "C": 6,
+  "C-": 5,
+  "D+": 4,
+  "D": 3,
+  "D-": 2,
+  "E": 1
 };
 
 document.querySelectorAll(".course-btn").forEach(btn => {
@@ -78,7 +94,7 @@ document.querySelectorAll(".course-btn").forEach(btn => {
         <input 
           class="grade-input w-16 px-2 py-1 text-center border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-300"
           maxlength="2"
-          placeholder="A+"
+          placeholder="A, B..."
         />
       </div>
     `).join("");
@@ -90,7 +106,7 @@ document.querySelectorAll(".course-btn").forEach(btn => {
         ${inputs}
       </div>
 
-      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full transition">
+      <button class="calc-btn mt-4 bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full transition">
         Calculate GPA
       </button>
 
@@ -98,3 +114,78 @@ document.querySelectorAll(".course-btn").forEach(btn => {
     `;
   });
 });
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("calc-btn")) {
+
+    const inputs = courseBox.querySelectorAll(".grade-input");
+
+    let total = 0;
+    let count = 0;
+
+    inputs.forEach(input => {
+      const grade = input.value.toUpperCase().trim();
+
+      if (gradePoints[grade]) {
+        total += gradePoints[grade];
+        count++;
+      }
+    });
+
+    const gpa = count ? (total / count).toFixed(2) : "0.00";
+
+    document.getElementById("results").innerHTML = `
+      <div class="p-3  rounded-lg mt-3">
+        <h4 class="font-semibold">Your GPA: ${gpa}</h4>
+      </div>
+    `;
+  }
+});
+
+
+
+console.log("Local.js loaded successfully");
+
+function fetchUniversityData(uniData) {
+$.ajax({
+method : 'GET',
+url: `https://api.worqnow.ai/education/${uniData}/universities`,
+success: function(data){
+    console.log(data);},
+
+
+error: function(error){
+    console.log( "error fetching data " , error);}
+
+
+})
+ 
+}
+ fetchUniversityData("au");
+ fetchUniversityData("ca");
+ fetchUniversityData("de");
+ fetchUniversityData("ie");
+ fetchUniversityData("nl");
+fetchUniversityData("gb");
+ fetchUniversityData("us");
+
+
+
+
+
+const searchInput = document.getElementById("searchInput");
+
+function searchscholarships(){
+    const input = searchInput.value.toLowerCase().trim();
+    const resultsdiv = document.getElementById("searchresults");
+
+if (input=="")
+{
+    resultsdiv.classList.add("hidden");
+    resultsdiv.innerHTML="";
+    return;
+}
+ const filteredscholarships = Object.keys(scholarshipdata).filter(key => key.toLowerCase().includes(input));
+ uniData.name.tolowercase().includes(input)
+ item.country.toLowerCase().includes(input)
+ 

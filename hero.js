@@ -94,3 +94,29 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("userName").textContent = name;
 
 });
+
+
+console.log("Local.js loaded successfully");
+
+function fetchUniversityData(uniData) {
+$.ajax({
+method : 'GET',
+url: `https://api.worqnow.ai/education/${uniData}/universities`,
+success: function(data){
+    console.log(data);},
+
+
+error: function(error){
+    console.log( "error fetching data " , error);}
+
+
+})
+ 
+}
+ fetchUniversityData("au");
+ fetchUniversityData("ca");
+ fetchUniversityData("de");
+ fetchUniversityData("ie");
+ fetchUniversityData("nl");
+fetchUniversityData("gb");
+ fetchUniversityData("us");

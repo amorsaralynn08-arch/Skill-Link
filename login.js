@@ -80,7 +80,7 @@ if (loginbutton) {
 
         newUser.savetostorage();
 
-        window.location.href = "hero.html";
+        window.location.replace("hero.html");
     });
 }
 
