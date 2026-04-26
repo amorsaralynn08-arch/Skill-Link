@@ -145,15 +145,16 @@ document.addEventListener("click", (e) => {
 
 
 console.log("Local.js loaded successfully");
+let allscholarships = [];
 
-function fetchUniversityData(uniData) {
+function fetchUniversityData(countryCode) {
 $.ajax({
 method : 'GET',
-url: `https://api.worqnow.ai/education/${uniData}/universities`,
+url: `https://api.worqnow.ai/education/${countryCode}/universities`,
 success: function(data){
-    console.log(data);},
+    console.log(data);
 
-
+allscholarships = allscholarships.concat(data.data);},
 error: function(error){
     console.log( "error fetching data " , error);}
 
@@ -166,26 +167,59 @@ error: function(error){
  fetchUniversityData("de");
  fetchUniversityData("ie");
  fetchUniversityData("nl");
-fetchUniversityData("gb");
- fetchUniversityData("us");
-
-
-
-
 
 const searchInput = document.getElementById("searchInput");
 
-function searchscholarships(){
-    const input = searchInput.value.toLowerCase().trim();
-    const resultsdiv = document.getElementById("searchresults");
+function searchscholarships() {
+  const input = searchInput.value.toLowerCase().trim();
+  const resultsdiv = document.getElementById("searchresults");
 
-if (input=="")
-{
+  if (input === "") {
     resultsdiv.classList.add("hidden");
-    resultsdiv.innerHTML="";
+    resultsdiv.innerHTML = "";
     return;
-}
- const filteredscholarships = Object.keys(scholarshipdata).filter(key => key.toLowerCase().includes(input));
- uniData.name.tolowercase().includes(input)
- item.country.toLowerCase().includes(input)
+  }
+   if(allscholarships.length === 0) {
+    resultsdiv.classList.remove("hidden");
+    resultsdiv.innerHTML="<p>Loading scholarships...</p>";
+    return;
+  }
+
+  const filtered = allscholarships.filter(item =>
+  item.name?.toLowerCase().includes(input) ||
+  item.city?.toLowerCase().includes(input) ||
+  item.region?.toLowerCase().includes(input) ||
+  item.code?.toLowerCase().includes(input)
+);
+
+  resultsdiv.classList.remove("hidden");
  
+
+  if (filtered.length > 0) {
+  resultsdiv.innerHTML = filtered.map(item => `
+    <div class="p-3 bg-white rounded-lg shadow-md mb-2">
+      <h4 class="font-semibold">${item.name}</h4>
+      <p>${item.city}, ${item.region}</p>
+      <a href="${item.website}" target="_blank"
+       class="text-blue-600 underline hover:text-blue-800">
+      Visit University Website →
+    </a>
+
+    </div>
+  `).join("");
+} else {
+  resultsdiv.innerHTML = `
+    <div class="p-3 bg-white rounded-lg shadow-md mb-2">
+      <h4 class="font-semibold">No universities found</h4>
+      <p>Try searching something else</p>
+    </div>
+  `;
+}
+}
+
+searchInput.addEventListener("input", searchscholarships);
+
+document.getElementById("searchIcon")
+  .addEventListener("click", searchscholarships);
+
+
