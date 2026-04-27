@@ -1,6 +1,6 @@
-// =====================
-// 1. USER CLASS (stores login info)
-// =====================
+
+// USER CLASS (stores login info)
+
 
 
 console.log("Script loaded successfully");
@@ -23,9 +23,9 @@ class Userloggindata {
 }
 
 
-// =====================
-// 2. HERO PAGE WELCOME DISPLAY
-// =====================
+
+// HERO PAGE WELCOME DISPLAY
+
 class Welcomescreen {
     constructor(elementId) {
         this.displayElement = document.getElementById(elementId);
@@ -56,9 +56,9 @@ class Welcomescreen {
 }
 
 
-// =====================
-// 3. LOGIN PAGE LOGIC
-// =====================
+
+//  LOGIN PAGE LOGIC
+
 const loginbutton = document.getElementById("loginbtn");
 
 if (loginbutton) {
@@ -85,9 +85,9 @@ if (loginbutton) {
 }
 
 
-// =====================
-// 4. HERO PAGE INIT
-// =====================
+
+// HERO PAGE DISPLAY 
+
 document.addEventListener("DOMContentLoaded", () => {
     const welcome = new Welcomescreen("welcome-display");
     welcome.displayonscreen();
