@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script defer src="internationl.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
@@ -84,13 +86,13 @@
 
     <!-- Search bar -->
     <div class="mt-6 flex items-center bg-white shadow-lg rounded-full px-4 py-2">
-      <input id="searchInput" type="text" placeholder="Search scholarships..." class="flex-1 outline-none"/>
+      <input id="searchbar" type="text" placeholder="Search scholarships..." class="flex-1 outline-none"/>
       <i id="searchIcon" class="fa-solid fa-search text-gray-500"></i>
     </div>
   </div>
 
 
-<div id="searchresults" class="hidden"></div>
+<div id="resultsdiv" class="hidden"></div>
 
   <!-- RIGHT SIDE (globe) -->
   <div class="relative">
